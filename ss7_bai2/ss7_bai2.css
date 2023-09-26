@@ -1,0 +1,45 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+img{
+    width: 180px;
+    height: 100px;
+}
+#head-link li{
+    display: inline-block;
+    text-align: center;
+}
+#head-link p{
+    display: inline-block;
+}
+#head-link{
+    text-align: center;
+}
+#head-link li:hover a{
+    font-weight: bolder;
+}
+
+#left-content{
+    float: left;
+    width: 30%;
+}
+#left-content iframe {
+    padding: 0 10px 20px 10px;
+    width: 80%;
+    height: auto;
+}
+
+#right-content{
+    width: 70%;
+    float: right;
+}
+.vid_box iframe{
+    width: 90%;
+    height: 500px;
+}
+
+#content{
+    margin-top: 10px;
+}

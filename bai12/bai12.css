@@ -1,0 +1,261 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x:hidden;
+}
+
+#header{
+    position: fixed;
+    width: 100%;
+}
+
+#nav {
+    list-style-type: none;
+    background-color: white;
+    height: 54px;
+}
+
+#nav li {
+    display: inline-block;
+}
+
+#nav li a{
+    text-decoration: none;
+    color: white;
+}
+
+#nav .icons {
+
+}
+
+#nav .fa-facebook{
+    color: #1877f2;
+    font-size: 40px;
+    line-height: 54px;
+    margin-left: 14px;
+}
+
+#nav .fa-magnifying-glass{
+    position: absolute;
+    margin-top: 15px;
+    color: #65676b;
+    z-index: 1;
+    left: 14px;
+    bottom: 9px;
+}
+
+#nav input{
+    margin-bottom: 3px;
+    position: absolute;
+    bottom: 6.5px;
+    left: 40px;
+    border-style: none;
+    color: #65676b;
+    font-size: 14px;
+}
+
+#nav .icon {
+    line-height: 54px;
+    color: #65676b;
+    font-size: 22px;
+    margin-bottom: 2px;
+}
+
+#nav li div {
+    position: relative;
+    bottom: 5.5px;
+    width: 233px;
+    height: 40px;
+    top: 6px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+#nav .fa-house{
+    margin-left: 200px;
+}
+#nav .fa-tv{
+    margin-left: 70px;
+}
+#nav .fa-store{
+    margin-left: 70px;
+}
+#nav .fa-people-group{
+    margin-left: 70px;
+}
+#nav .fa-gamepad{
+    margin-left: 70px;
+}
+
+#nav .right {
+    color: #050505;
+}
+
+#nav .fa-bars{
+    margin-left: 400px;
+}
+
+#nav .fa-facebook-messenger{
+    margin-left: 22px;
+}
+#nav .fa-bell{
+    margin-left: 22px;
+}
+
+#nav .circle-image{
+    margin-left: 22px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+#nav .circle-image img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+#sidebar-left, #main-content{
+    margin-top: 54px;
+    width: 30%;
+    float: left;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+#sidebar-right {
+    margin-top: 54px;
+    width: 25%;
+    float: right;
+    /*background-color: black;*/
+}
+
+#main-content {
+    width: 45%;
+    /*background-color: pink;*/
+}
+
+.image-div{
+    position: relative;
+    bottom: -8px;
+}
+
+#sidebar-left .circle-image{
+    margin-top: 20px;
+    margin-left: 14px;
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+#sidebar-left .circle-image img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+#sidebar-left .image-div p{
+    bottom: 10px;
+    position: relative;
+    font-family: sans-serif;
+    font-size: 15px;
+    margin-left: 10px;
+    display: inline-block;
+    line-height: 52px;
+    margin-bottom: 10px;
+}
+
+.icon-div {
+    margin-left: 10px;
+    font-size: 20px;
+
+}
+.icon-div p{
+    font-family: sans-serif;
+    font-size: 15px;
+    left: 57px;
+    top: -20px;
+    position: relative;
+}
+
+.icon-right {
+    color: #65676b;
+}
+
+#sidebar-right li {
+    list-style-type: none;
+}
+
+#sidebar-right .first-heading{
+    position: relative;
+    top: 23px;
+    right: 198px;
+    margin-left: 200px;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
+.fa-magnifying-glass {
+    position: relative;
+    left: 397px;
+}
+
+.fa-ellipsis {
+    position: relative;
+    left: 400px;
+}
+
+.ads-div div {
+    margin-top: 20px;
+    width: 131px;
+    height: 131px;
+}
+
+#sidebar-right .first-line .circle-image{
+    margin-top: 20px;
+    /*margin-left: 14px;*/
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+#sidebar-right .circle-image img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+#sidebar-right .ads-div img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 10%;
+}
+
+.friends-list p {
+    position: relative;
+    left: 49px;
+    bottom: 33px;
+}
+
+#sidebar-right .circle-image{
+    margin-top: 10px;
+    /*margin-left: 14px;*/
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+
+
+

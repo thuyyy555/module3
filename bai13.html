@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Open Sans";
+        }
+        .container {
+            display: grid;
+            height: 100vh;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: 50px 50px repeat(5, 1fr) 50px;
+            grid-template-areas:
+    "header1 header1 header1 header1 header1 header1 header1 header1 header1 header1 header1 header1"
+    "header2 header2 header2 header2 header2 header2 header2 header2 header2 header2 header2 header2"
+    "sidebar sidebar sidebar mainbar mainbar mainbar mainbar mainbar mainbar mainbar mainbar mainbar"
+    "footer footer footer footer footer footer footer footer footer footer footer footer";
+            column-gap: 5px;
+            row-gap: 5px;
+        }
+        .background-header {
+            background-color: white;
+            height: 105px;
+            width: 100%;
+            position: fixed;
+        }
+        .header1 {
+            grid-area: header1;
+            height: 50px;
+            background-color: #F5F6F6;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+        .logo {
+            width: 150px;
+            padding: 10px;
+        }
+        .header2 {
+            grid-area: header2;
+            height: 50px;
+            background-color: #F5F6F6;
+            text-align: center;
+            position: fixed;
+            top: 55px;
+            left: 0;
+            right: 0;
+        }
+        .header2 a, p {
+            color: black;
+            text-decoration: none;
+            padding: 10px;
+            display: inline-block;
+            position: relative;
+            top: 5px;
+        }
+        .header2 a:hover {
+            font-weight: bolder;
+            transition: 0.1s ease-in-out;
+        }
+        .sidebar {
+            grid-area: sidebar;
+            background-color: #F5F6F6;
+        }
+        .boxvideo {
+            padding: 20px;
+        }
+        .boxvideo iframe {
+            width: 95%;
+            padding-bottom: 5px;
+        }
+        .boxvideo span {
+            padding: 10px;
+        }
+        .boxvideo span i {
+            font-size: smaller;
+            font-weight: bold;
+            color: #808085;
+        }
+        .web {
+            display: block;
+            padding-left: 10px;
+            font-size: x-large;
+            color: #808085;
+        }
+        .mainbar {
+            grid-area: mainbar;
+            background-color: #F5F6F6;
+        }
+        .mainbar iframe {
+            width: 90%;
+            height: 500px;
+            padding: 50px;
+            display: block;
+        }
+        .mainbar span {
+            padding-left: 50px;
+        }
+        .mainbar b {
+            width: 90%;
+            padding-left: 50px;
+        }
+        .mainbar span b {
+            font-size: 30px;
+            color: #808085;
+            display: block;
+        }
+        .footer {
+            grid-area: footer;
+            height: 30px;
+            background-color: #d5d1d1;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        .footer span {
+            position: absolute;
+            top: 5px;
+            left: 0;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="background-header"></div>
+    <div class="header1">
+        <img class="logo" src="https://fptplay.vn/images/logo-fpt-play.png">
+    </div>
+    <div class="header2">
+        <a href="#">
+            Phim hoạt hình
+        </a>
+        <p> | </p>
+        <a href="#">
+            Phim hoạt hình yêu thích
+        </a>
+        <p> | </p>
+        <a href="#">
+            Nhân vật hoạt hình
+        </a>
+        <p> | </p>
+        <a href="#">
+            Góp ý
+        </a>
+    </div>
+    <div class="sidebar">
+        <div class="boxvideo">
+            <iframe  width="560" height="315" src="https://www.youtube.com/embed/EGoE47R1rYM"
+                     title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
+                        clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+            </iframe>
+            <span>
+                    <b> Khách sạn Nobi - </b>
+                    <i> 5,147,528 lượt xem </i>
+                    <b class="web"> Doraemon Vietsub </b>
+                </span>
+        </div>
+        <div class="boxvideo">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/zFEF1v8FHjw"
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
+                        clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+            </iframe>
+            <span>
+                    <b> Suneo khổng lồ - </b>
+                    <i> 5,147,528 lượt xem </i>
+                    <b class="web"> Chanel Fun </b>
+                </span>
+        </div>
+        <div class="boxvideo">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/hSvkzXZPYQg"
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
+                        clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+            </iframe>
+            <span>
+                    <b> Còi điều khiển vật - </b>
+                    <i> 5,147,528 lượt xem </i>
+                    <b class="web"> Doraemon Vietsub </b>
+                </span>
+        </div>
+        <div class="boxvideo">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Z3wQunEaMRU"
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
+                        clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+            </iframe>
+            <span>
+                    <b> Máy tạo kẹo bông - </b>
+                    <i> 5,147,528 lượt xem </i>
+                    <b class="web"> Chanel Fun </b>
+                </span>
+        </div>
+    </div>
+    <div class="mainbar">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/BDj7TAvw6WI"
+                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
+                    clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+        </iframe>
+        <span>
+                <b> Tớ là Mari - </b>
+                <i> 5,147,528 lượt xem </i>
+                <span> <b> Tác giả </b> </span>
+            </span>
+        <span>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                when an unknown printer took a galley of type and scrambled it to make a type
+                specimen book. It has survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged. It was popularised in
+                the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                and more recently with desktop publishing software like Aldus PageMaker
+                including versions of Lorem Ipsum.
+            </span>
+        <span>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                when an unknown printer took a galley of type and scrambled it to make a type
+                specimen book. It has survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged. It was popularised in
+                the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                and more recently with desktop publishing software like Aldus PageMaker
+                including versions of Lorem Ipsum.
+            </span>
+    </div>
+    <div class="footer">
+            <span>
+            </span>
+    </div>
+</div>
+</body>
+</html>
