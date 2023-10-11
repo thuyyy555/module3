@@ -33,8 +33,6 @@
                         onclick="passIdToModal(${matBang.id})">
                     Delete
                 </button>
-                </div>
-                </div>
             </td>
                 <%--      <td>--%>
                 <%--        <button type="button" class="btn btn-secondary">--%>

@@ -7,40 +7,50 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <style>
-        #header{
+        #header {
             /*height: 46px;*/
             /*background-color: black;*/
         }
-        .circle-image{
+
+        .circle-image {
             margin-top: 10px;
             margin-left: 55px;
             display: inline-block;
             width: 40px;
             height: 40px;
         }
-        .circle-image img{
+
+        .circle-image img {
             object-fit: cover;
             width: 100%;
             height: 100%;
             border-radius: 10%;
         }
-        p{
+
+        p {
             margin-top: 10px;
             margin-left: 1300px;
             display: inline-block;
         }
-        .nav-item{
+
+        .nav-item {
             margin-right: 20px;
         }
-        #left-content{
+
+        #left-content {
             float: left;
-            width: 30%;
-        }
-        #right-content{
-            float: right;
-            width: 70%;
+            width: 10%;
         }
 
+        #right-content {
+            float: right;
+            width: 90%;
+        }
+
+        .r_cont {
+            width: 100%;
+            height: 500px;
+        }
     </style>
 </head>
 <body>
@@ -50,10 +60,11 @@
     </div>
     <p>Gojou Satoru</p>
 </div>
-<hr  width="100%" size="5px" align="center" />
+<hr width="100%" size="5px" align="center"/>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -62,26 +73,80 @@
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Employee</a>
+
+                    <%--          <a class="nav-link active" aria-current="page" href="/customer?action=showCustomerForm">Customer</a>--%>
+                    <%--                    <a class="nav-link active" aria-current="page" href="/customer?action=showCustomerForm" target="r_cont">Customer</a>--%>
+                    <div class="dropdown">
+                        <a class="nav-link active dropdown-toggle" href="#" role="button" id="dropdownMenuLinkEmployee"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            Employee
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLinkEmployee">
+                            <li><a class="dropdown-item" href="/employee?action=display" target="r_cont">View</a></li>
+                            <li><a class="dropdown-item" href="/employee?action=create" target="r_cont">Add new
+                                Employee</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Customer</a>
+
+                    <%--          <a class="nav-link active" aria-current="page" href="/customer?action=showCustomerForm">Customer</a>--%>
+                    <%--                    <a class="nav-link active" aria-current="page" href="/customer?action=showCustomerForm" target="r_cont">Customer</a>--%>
+                    <div class="dropdown">
+                        <a class="nav-link active dropdown-toggle" href="#" role="button" id="dropdownMenuLinkCustomer"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            Customer
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLinkCustomer">
+                            <li><a class="dropdown-item" href="/customer?action=display" target="r_cont">View</a></li>
+                            <li><a class="dropdown-item" href="/customer?action=create" target="r_cont">Add New Customer</a></li>
+                            <li><a class="dropdown-item" href="/customer?action=displayCustomerUSer" target="r_cont">View Customer Using Service</a></li>
+                        </ul>
+                    </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Service</a>
+                    <%--                    <a class="nav-link active" aria-current="page" href="#">Service</a>--%>
+                    <div class="dropdown">
+                        <a class="nav-link active dropdown-toggle" href="#" role="button" id="dropdownMenuLinkService"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            Service
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLinkService">
+                            <li><a class="dropdown-item" href="/service?action=display" target="r_cont">View</a></li>
+                            <li><a class="dropdown-item" href="/service?action=create" target="r_cont">Add new
+                                Service</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Contract</a>
+                    <div class="dropdown">
+                        <a class="nav-link active dropdown-toggle" href="#" role="button" id="dropdownMenuLinkContract"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            Contract
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLinkContract">
+                            <li><a class="dropdown-item" href="/contract?action=display" target="r_cont">View Contract</a></li>
+                            <li><a class="dropdown-item" href="/contract?action=displayContractDetail" target="r_cont">View Contract Detail</a></li>
+                            <li><a class="dropdown-item" href="/contract?action=create" target="r_cont">Add New Contract</a></li>
+                            <li><a class="dropdown-item" href="/contract?action=createContractDetail" target="r_cont">Add New Contract Detail</a></li>
+                        </ul>
+                    </div>
                 </li>
             </ul>
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+<%--            <form class="d-flex">--%>
+<%--                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">--%>
+<%--                <button class="btn btn-outline-success" type="submit">Search</button>--%>
+<%--            </form>--%>
         </div>
     </div>
 </nav>
-<hr  width="100%" size="5px" align="center" />
+<hr width="100%" size="5px" align="center"/>
 <div id="content">
     <div id="left-content">
         <ul>
@@ -91,7 +156,7 @@
         </ul>
     </div>
     <div id="right-content">
-
+        <iframe src="" name="r_cont" class="r_cont"></iframe>
     </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
